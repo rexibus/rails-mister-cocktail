@@ -12,7 +12,6 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
     redirect_to cocktails_path
-    # redirect cocktail_path(@coctail)
   end
 
   def show
@@ -20,10 +19,11 @@ class CocktailsController < ApplicationController
     @doses = Dose.where(cocktail_id: params[:id])
   end
 
+
 private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :photo)
   end
 
 

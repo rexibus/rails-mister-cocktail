@@ -1,8 +1,18 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://kitt.lewagon.com/placeholder/cities/berlin');">
+  <div class="banner-content">
+    <h1>Cocktail Hache</h1>
+    <p>The worse cocktail in town so you will stop drinking</p>
+    <a class="btn btn-primary btn-lg">Stop drinking</a>
+  </div>
+</div>
+
 <h1>Cocktails List</h1>
 <% @cocktails.each do |cocktail|%>
 <ul>
   <li><%= link_to cocktail.name, cocktail_path(cocktail) %></li>
 </ul>
 <% end  %>
+
+<p><%= link_to "add cocktail", new_cocktail_path %></p>
 
 

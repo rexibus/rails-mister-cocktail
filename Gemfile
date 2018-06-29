@@ -39,6 +39,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'simple_form'
 gem 'figaro'
+gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 
 group :development, :test do
